@@ -1,9 +1,0 @@
-----Segue os scripts para a inserir os dados nas tabelas Elmasri no postgresql. 
-
-----Para evitar eventuais problemas, favor seguir a ordem de criação dos scripts. 
-
----- Como não havia nenhum colaborador na tabela funcionário, foi necessário retirar o Not Null da FK cpf_supervisor. 
-
----- Na tabela funcionários o endereco foi mudado de Varchar 30 para 100 - um dos funcionários não coube no campo.
-
----- Como havia colaborador com hora null na tabela trabalha_em, foi necessário retirar o Not Null da coluna hora.
