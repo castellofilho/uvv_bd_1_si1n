@@ -1,0 +1,64 @@
+-- Criação da Tabela Funcionário. 
+
+
+-- Table: elmasri.funcionario
+
+-- DROP TABLE IF EXISTS elmasri.funcionario;
+
+CREATE TABLE IF NOT EXISTS elmasri.funcionario
+(
+    cpf character(11) COLLATE pg_catalog."default" NOT NULL,
+    primeiro_nome character varying(15) COLLATE pg_catalog."default" NOT NULL,
+    nome_meio character varying(1) COLLATE pg_catalog."default",
+    ultimo_nome character varying(15) COLLATE pg_catalog."default" NOT NULL,
+    data_nascimento date,
+    endereco character varying(100) COLLATE pg_catalog."default",
+    sexo character varying(1) COLLATE pg_catalog."default",
+    salario numeric(10,2),
+    cpf_supervisor character(11) COLLATE pg_catalog."default",
+    numero_departamento integer NOT NULL,
+    CONSTRAINT cpf PRIMARY KEY (cpf),
+    CONSTRAINT funcionario_cpf_supervisor_fkey FOREIGN KEY (cpf_supervisor)
+        REFERENCES elmasri.funcionario (cpf) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS elmasri.funcionario
+    OWNER to luiz;
+
+COMMENT ON TABLE elmasri.funcionario
+    IS 'Tabela que armazena as informações dos funcionários.';
+
+COMMENT ON COLUMN elmasri.funcionario.cpf
+    IS 'CPF do funcionário. Será a PK da tabela.';
+
+COMMENT ON COLUMN elmasri.funcionario.primeiro_nome
+    IS 'Primeiro nome do funcionário.';
+
+COMMENT ON COLUMN elmasri.funcionario.nome_meio
+    IS 'Inicial do nome do meio.';
+
+COMMENT ON COLUMN elmasri.funcionario.ultimo_nome
+    IS 'Sobrenome do funcionário.';
+
+COMMENT ON COLUMN elmasri.funcionario.data_nascimento
+    IS 'Data de nascimento do funcionário.';
+
+COMMENT ON COLUMN elmasri.funcionario.endereco
+    IS 'Endereço do funcionário.';
+
+COMMENT ON COLUMN elmasri.funcionario.sexo
+    IS 'Sexo do funcionário.';
+
+COMMENT ON COLUMN elmasri.funcionario.salario
+    IS 'Salário do funcionário.';
+
+COMMENT ON COLUMN elmasri.funcionario.cpf_supervisor
+    IS 'CPF do supervisor. Será uma FK para a própria tabela (um auto-relacionamento).';
+
+COMMENT ON COLUMN elmasri.funcionario.numero_departamento
+    IS 'Número do departamento do funcionário.';
