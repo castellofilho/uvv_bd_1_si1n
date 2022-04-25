@@ -1,5 +1,0 @@
-insert into departamento (numero_departamento,nome_departamento,cpf_gerente,data_inicio_gerente)
-values 
-(5,'Pesquisa',33344555587,'05/22/1988'),
-(4,'Administração',98765432168,'01/01/1995'),
-(1,'Matriz',88866555576,'06/19/1981');
