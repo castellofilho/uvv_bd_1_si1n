@@ -1,0 +1,36 @@
+-- Criação da Tabela Trabalha_Em 
+
+
+-- Table: elmasri.trabalha_em
+
+-- DROP TABLE IF EXISTS elmasri.trabalha_em;
+
+CREATE TABLE IF NOT EXISTS elmasri.trabalha_em
+(
+    cpf_funcionario character(11) COLLATE pg_catalog."default" NOT NULL,
+    numero_projeto integer NOT NULL,
+    horas numeric(3,1),
+    CONSTRAINT trabalha_em_pkey PRIMARY KEY (cpf_funcionario, numero_projeto),
+    CONSTRAINT trabalha_em_cpf_funcionario_fkey FOREIGN KEY (cpf_funcionario)
+        REFERENCES elmasri.funcionario (cpf) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT trabalha_em_numero_projeto_fkey FOREIGN KEY (numero_projeto)
+        REFERENCES elmasri.projeto (numero_projeto) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS elmasri.trabalha_em
+    OWNER to luiz;
+
+COMMENT ON TABLE elmasri.trabalha_em
+    IS 'Tabela para armazenar quais funcionários trabalham em quais projetos.';
+
+COMMENT ON COLUMN elmasri.trabalha_em.cpf_funcionario
+    IS 'CPF do funcionário. Faz parte da PK desta tabela e é uma FK para a tabela funcionário.';
+
+COMMENT ON COLUMN elmasri.trabalha_em.numero_projeto
+    IS 'Número do projeto. Faz parte da PK desta tabela e é uma FK para a tabela projeto.';

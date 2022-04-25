@@ -1,0 +1,5 @@
+----Segue os scripts para a criação do projeto Elmasri no postgresql. 
+
+----Para evitar eventuais problemas, favor seguir a ordem de criação dos scripts. 
+
+---- Como não havia nenhum colaborador na tabela funcionário, foi necessário retirar o Not Null da FK cpf_supervisor. 
