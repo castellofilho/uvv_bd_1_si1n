@@ -1,0 +1,14 @@
+-- uvv.dependente definition
+
+
+CREATE TABLE uvv.dependente (
+	cpf_funcionario char(11) NOT NULL COMMENT 'CPF do funcionário. Faz parte da PK desta tabela e é uma FK para a tabela funcionário.',
+	nome_dependente char(11) NOT NULL COMMENT 'Nome do dependente. Faz parte da PK desta tabela.',
+	sexo char(1) NULL COMMENT 'Sexo do dependente.',
+	data_nascimento varchar(100) NULL COMMENT 'Data de nascimento do dependente.',
+	parentesco varchar(15) NULL COMMENT 'Descrição do parentesco do dependente com o funcionário.'
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=latin1
+COLLATE=latin1_swedish_ci
+COMMENT='Tabela que armazena as informações dos dependentes dos funcionários.';

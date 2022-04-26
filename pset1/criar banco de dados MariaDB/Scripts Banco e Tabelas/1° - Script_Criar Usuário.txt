@@ -1,0 +1,5 @@
+-- Criar usuário no banco de dados 
+
+CREATE USER 'luiz'@'localhost' IDENTIFIED BY 'L88359646.';
+
+grant all on * . * to 'luiz'@'localhost'; 

@@ -1,0 +1,10 @@
+-- uvv.localizacoes_departamento definition
+
+CREATE TABLE uvv.localizacoes_departamento (
+	numero_departamento INTEGER NOT NULL COMMENT 'Número do departamento. Faz parte da PK desta tabela e também é uma FK para a tabela departamento.',
+	`local` varchar(15) NOT NULL COMMENT 'Localização do departamento. Faz parte da PK desta tabela.'
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=latin1
+COLLATE=latin1_swedish_ci
+COMMENT='Tabela que armazena as possíveis localizações dos departamentos.';

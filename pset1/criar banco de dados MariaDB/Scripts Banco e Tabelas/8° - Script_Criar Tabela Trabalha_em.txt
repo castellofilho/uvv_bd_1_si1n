@@ -1,0 +1,11 @@
+-- uvv.trabalha_em definition
+
+CREATE TABLE uvv.trabalha_em (
+	cpf_funcionario char(11) NOT NULL COMMENT 'CPF do funcionário. Faz parte da PK desta tabela e é uma FK para a tabela funcionário.',
+	numero_projeto INTEGER NULL COMMENT 'Número do projeto. Faz parte da PK desta tabela e é uma FK para a tabela projeto.',
+	horas decimal(3,1) NOT NULL COMMENT 'Horas trabalhadas pelo funcionário neste projeto.'
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=latin1
+COLLATE=latin1_swedish_ci
+COMMENT='Tabela para armazenar quais funcionários trabalham em quais projetos.';

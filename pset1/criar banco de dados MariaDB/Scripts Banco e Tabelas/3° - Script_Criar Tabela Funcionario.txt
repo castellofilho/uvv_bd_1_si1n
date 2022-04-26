@@ -1,0 +1,16 @@
+CREATE TABLE uvv.funcionario (
+	cpf char(11) NOT NULL COMMENT 'CPF do funcionário. Será a PK da tabela.',
+	primeiro_nome varchar(15) NOT NULL COMMENT 'Primeiro nome do funcionário.',
+	nome_meio char(1) NULL COMMENT 'Inicial do nome do meio.',
+	ultimo_nome varchar(15) NOT NULL COMMENT 'Sobrenome do funcionário.',
+	data_nascimento varchar(100) NULL COMMENT 'Data de Nascimento do funcionário. ',
+	endereco varchar(30) NULL COMMENT 'Endereço do funcionário.',
+	sexo char(1) NULL COMMENT 'Sexo do funcionário.',
+	salario varchar(100) NULL COMMENT 'Salário do funcionário.',
+	cpf_supervisor char(11) NOT NULL COMMENT 'CPF do supervisor. Será uma FK para a própria tabela (um auto-relacionamento).',
+	numero_departamento INTEGER NOT NULL COMMENT 'Número do departamento do funcionário.'
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=latin1
+COLLATE=latin1_swedish_ci
+COMMENT='Tabela que armazena as informações dos funcionários.';
