@@ -1,0 +1,10 @@
+-- Inserir dados na tabela projeto
+
+insert into projeto (nome_projeto,numero_projeto,local_projeto,numero_departamento)
+values
+('ProdutoX',1,'Santo André',5),
+('ProdutoY',2,'Itú',5),
+('ProdutoZ',3,'São Paulo',5),
+('Informatização',10,'Mauá',4),
+('Reogarnização',20,'São Paulo',1),
+('Novosbeneficios',30,'Mauá',4);

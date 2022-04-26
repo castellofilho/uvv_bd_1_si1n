@@ -1,0 +1,9 @@
+-- Inserir dados na tabela localizações departamento
+
+insert into localizacoes_departamento (numero_departamento,localizacao)
+values 
+(1,'São Paulo'),
+(4,'Mauá'),
+(5,'Santo André'),
+(5,'Itú'),
+(5,'São Paulo');
