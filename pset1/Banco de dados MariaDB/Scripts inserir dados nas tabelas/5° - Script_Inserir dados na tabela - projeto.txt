@@ -1,0 +1,18 @@
+INSERT INTO uvv.projeto
+(numero_projeto, nome_projeto, local_projeto, numero_departamento)
+VALUES(1, 'ProdutoX', 'Santo André', 5);
+INSERT INTO uvv.projeto
+(numero_projeto, nome_projeto, local_projeto, numero_departamento)
+VALUES(2, 'ProdutoY', 'Itú', 5);
+INSERT INTO uvv.projeto
+(numero_projeto, nome_projeto, local_projeto, numero_departamento)
+VALUES(3, 'ProdutoZ', 'São Paulo', 5);
+INSERT INTO uvv.projeto
+(numero_projeto, nome_projeto, local_projeto, numero_departamento)
+VALUES(10, 'Informatização', 'Mauá', 4);
+INSERT INTO uvv.projeto
+(numero_projeto, nome_projeto, local_projeto, numero_departamento)
+VALUES(20, 'Reogarnização', 'São Paulo', 1);
+INSERT INTO uvv.projeto
+(numero_projeto, nome_projeto, local_projeto, numero_departamento)
+VALUES(30, 'Novosbeneficios', 'Mauá', 4);

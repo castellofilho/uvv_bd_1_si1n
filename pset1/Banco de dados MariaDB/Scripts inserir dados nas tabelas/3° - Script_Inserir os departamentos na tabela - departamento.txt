@@ -1,0 +1,9 @@
+INSERT INTO uvv.departamento
+(numero_departamento, nome_departamento, cpf_gerente, data_inicio_gerente)
+VALUES(5, 'Pesquisa', '33344555587', '1988-05-22');
+INSERT INTO uvv.departamento
+(numero_departamento, nome_departamento, cpf_gerente, data_inicio_gerente)
+VALUES(4, 'Administração', '98765432168', '1995-01-01');
+INSERT INTO uvv.departamento
+(numero_departamento, nome_departamento, cpf_gerente, data_inicio_gerente)
+VALUES(1, 'Matriz', '88866555576', '1981-06-19');

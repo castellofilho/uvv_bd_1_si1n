@@ -1,0 +1,15 @@
+INSERT INTO uvv.localizacoes_departamento
+(numero_departamento, `local`)
+VALUES(1, 'São Paulo');
+INSERT INTO uvv.localizacoes_departamento
+(numero_departamento, `local`)
+VALUES(4, 'Mauá');
+INSERT INTO uvv.localizacoes_departamento
+(numero_departamento, `local`)
+VALUES(5, 'Santo André');
+INSERT INTO uvv.localizacoes_departamento
+(numero_departamento, `local`)
+VALUES(5, 'Itú');
+INSERT INTO uvv.localizacoes_departamento
+(numero_departamento, `local`)
+VALUES(5, 'São Paulo');

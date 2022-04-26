@@ -1,0 +1,5 @@
+----Segue os scripts para a inserir os dados nas tabelas Elmasri no MariaDB. 
+
+----Para evitar eventuais problemas, favor seguir a ordem de criação dos scripts. 
+
+---- Na tabela funcionários o endereco foi mudado de Varchar 30 para 100 - um dos funcionários não coube no campo.

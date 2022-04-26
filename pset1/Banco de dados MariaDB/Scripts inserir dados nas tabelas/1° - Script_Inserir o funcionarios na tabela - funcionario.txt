@@ -1,0 +1,24 @@
+INSERT INTO uvv.funcionario
+(cpf, primeiro_nome, nome_meio, ultimo_nome, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento)
+VALUES('12345678966', 'João', 'B', 'Silva', '01/09/1965', 'Rua das Flores,751,São Paulo,SP', 'M', '30.000', '33344555587', 5);
+INSERT INTO uvv.funcionario
+(cpf, primeiro_nome, nome_meio, ultimo_nome, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento)
+VALUES('33344555587', 'Fernando', 'T', 'Wong', '12/08/1955', 'Rua da Lapa,34,São Paulo,SP', 'M', '40.000', '88866555576', 5);
+INSERT INTO uvv.funcionario
+(cpf, primeiro_nome, nome_meio, ultimo_nome, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento)
+VALUES('99988777767', 'Alice', 'J', 'Zelaya', '01/19/1968', 'Rua Souza Lima,35,Curitiba, PR', 'F', '25.000', '98765432168', 4);
+INSERT INTO uvv.funcionario
+(cpf, primeiro_nome, nome_meio, ultimo_nome, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento)
+VALUES('98765432168', 'Jennifer', 'S', 'Souza', '06/20/1941', 'Av.Arthur de Lima,54,Santo André,SP', 'F', '43.000', '88866555576', 4);
+INSERT INTO uvv.funcionario
+(cpf, primeiro_nome, nome_meio, ultimo_nome, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento)
+VALUES('66688444476', 'Ronaldo', 'K', 'Lima', '09/15/1962', 'Rua Rebouças,65,Piracicaba,SP', 'M', '38.000', '33344555587', 5);
+INSERT INTO uvv.funcionario
+(cpf, primeiro_nome, nome_meio, ultimo_nome, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento)
+VALUES('45345345376', 'Joice', 'A', 'Leite', '07/31/1972', 'Av.Lucas Obes,74,São Paulo,SP', 'F', '25.000', '33344555587', 5);
+INSERT INTO uvv.funcionario
+(cpf, primeiro_nome, nome_meio, ultimo_nome, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento)
+VALUES('98798798733', 'André', 'V', 'Pereira', '03/29/1969', 'Rua Timbira,35,São Paulo,SP', 'M', '25.000', '98765432168', 4);
+INSERT INTO uvv.funcionario
+(cpf, primeiro_nome, nome_meio, ultimo_nome, data_nascimento, endereco, sexo, salario, cpf_supervisor, numero_departamento)
+VALUES('88866555576', 'Jorge', 'E', 'Brito', '11/10/1937', 'Rua do Horto,35,São Paulo,SP', 'M', '55.000', '', 1);
