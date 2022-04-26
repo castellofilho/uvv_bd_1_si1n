@@ -1,1 +1,1 @@
-Scripts para criar o banco de dados Elmasri no SGBD MariaDB
+Scripts para criar o banco de dados do projeto Elmasri no SGBD MariaDB.
