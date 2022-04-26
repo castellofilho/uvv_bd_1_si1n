@@ -1,0 +1,14 @@
+-- Criar o Esquema Elmasri
+
+-- SCHEMA: elmasri
+
+-- DROP SCHEMA IF EXISTS elmasri ;
+
+CREATE SCHEMA IF NOT EXISTS elmasri
+
+
+    AUTHORIZATION luiz;
+
+-- Selecionar o eschema Elmarsi
+
+SET SEARCH_PATH TO elmasri, "\$user", public;
