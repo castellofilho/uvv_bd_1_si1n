@@ -1,0 +1,197 @@
+Questão 01 
+
+--Questão 01
+
+select nome_departamento as departamento,
+	avg(salario) as media
+	from funcionario natural join departamento
+	group by nome_departamento;
+
+______________________________________
+
+Questão 02
+
+-- Questão 02
+SELECT case when sexo ='M' then'Masculino'else 'Feminino'end AS genero,
+	avg(salario) as media
+	from funcionario
+	group by genero;
+
+______________________________________
+
+Questão 03
+
+-- Questão 03 - Ano, Mes, Dia 
+select nome_departamento as departamento,
+ primeiro_nome, funcionario.nome_meio, funcionario.ultimo_nome,
+		funcionario.data_nascimento, age(cast (data_nascimento as date)) as anos, funcionario.salario
+from funcionario
+natural join departamento
+
+----------------- 2° Opção ------------------
+
+-- Questão 03 - Ano
+select nome_departamento as departamento,
+ primeiro_nome, funcionario.nome_meio, funcionario.ultimo_nome,
+		funcionario.data_nascimento, extract (year from age(cast (data_nascimento as date))) as anos, funcionario.salario
+from funcionario
+inner join departamento using (numero_departamento);
+
+______________________________________
+
+Questão 04
+
+-- Questão 04
+select 
+ primeiro_nome, funcionario.nome_meio, funcionario.ultimo_nome,
+		age(cast (data_nascimento as date))  as anos, funcionario.salario,
+		case when salario < 35000.00 then salario * 1.2 else salario * 1.15 end
+from funcionario;
+
+______________________________________
+Questão 05
+
+-- Questão 05
+select nome_departamento as departamento,
+ nome_gerente, concat(primeiro_nome,' ' ,funcionario.nome_meio, ' ',funcionario.ultimo_nome) as funcionario
+		
+from funcionario
+natural join (select nome_departamento, 
+			  concat(primeiro_nome,' ' ,funcionario.nome_meio, ' ',funcionario.ultimo_nome) as nome_gerente, 
+			  departamento.numero_departamento 
+			  from funcionario
+			  inner join departamento on cpf = cpf_gerente) as departamento_gerente
+		  order by departamento, salario desc;
+
+______________________________________
+
+Questão 06
+
+-- Questão 06
+select concat(primeiro_nome,' ', nome_meio,' ', ultimo_nome) as funcionario,
+nome_departamento as departamento,
+nome_dependente as dependente,
+age(cast (dependente.data_nascimento as date))  as anos,
+case when dependente.sexo ='M' then'Masculino'else 'Feminino'end AS genero
+from funcionario
+inner join dependente on (cpf = cpf_funcionario)
+natural join departamento;
+
+______________________________________
+
+Questão 07
+
+-- Questão 07
+select concat(primeiro_nome,' ', nome_meio,' ', ultimo_nome) as funcionario,
+nome_departamento as departamento, salario
+from funcionario
+natural join departamento
+where funcionario.cpf not in (select cpf_funcionario from dependente ); 
+
+______________________________________
+
+Questão 08
+
+-- Questão 08
+select nome_departamento as departamento,
+nome_projeto as projeto,
+concat(primeiro_nome,' ', nome_meio,' ', ultimo_nome) as funcionario,
+horas as horas_trabalhadas
+from departamento
+natural join projeto
+natural join trabalha_em
+inner join funcionario on (cpf = cpf_funcionario );
+
+______________________________________
+
+Questão 09
+
+-- Questão 09
+select nome_departamento as departamento,
+nome_projeto as projetos,
+sum(horas) as horas_trabalhadas
+from departamento 
+natural join trabalha_em
+natural join projeto 
+group by departamento,projetos;
+
+______________________________________
+
+
+Questão 10
+
+-- A questão possui o mesmo enunciado da questão 01. 
+--Questão 10 
+select nome_departamento as departamento,
+	avg(salario) as media
+	from funcionario natural join departamento
+	group by nome_departamento;
+
+______________________________________
+
+Questão 11
+
+-- Questão 11
+select concat(primeiro_nome,' ', nome_meio,' ', ultimo_nome) as funcionario,
+nome_projeto as projeto,
+horas * 50 as valor_total 
+from projeto
+natural join trabalha_em
+inner join funcionario on (cpf = cpf_funcionario );
+
+______________________________________
+
+Questão 12
+
+-- Questão 12
+select nome_departamento as departamento,
+nome_projeto as projeto,
+concat(primeiro_nome,' ', nome_meio,' ', ultimo_nome) as funcionario
+from departamento
+natural join projeto
+natural join trabalha_em
+inner join funcionario on (cpf = cpf_funcionario ) 
+where horas is null ;
+
+______________________________________
+
+Questão 13
+
+-- Questão 13
+(select concat(primeiro_nome,' ', nome_meio,' ', ultimo_nome) as nome, 
+extract (year from age(cast (data_nascimento as date))) as idade,
+case when sexo ='M' then'Masculino'else 'Feminino'end AS sexo 
+from funcionario)
+
+union 
+
+(select nome_dependente as nome, 
+extract (year from age(cast (data_nascimento as date))) as idade,
+case when sexo ='M' then'Masculino'else 'Feminino'end AS sexo 
+from dependente) 
+order by idade desc;
+
+______________________________________
+
+Questão 14 
+
+-- Questão 14
+select nome_departamento as departamento,
+count(cpf) as quantidade_funcionarios 
+	from departamento
+	natural join funcionario
+	group by nome_departamento;
+
+______________________________________
+
+Questão 15 
+
+-- Questão 15
+select nome_departamento as departamento,
+nome_projeto as projeto,
+concat(primeiro_nome,' ', nome_meio,' ', ultimo_nome) as funcionario
+from departamento
+natural join projeto natural join trabalha_em 
+right join funcionario on (cpf = cpf_funcionario );
+
+_________________________________________
